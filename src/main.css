@@ -1,0 +1,22 @@
+* {
+     
+        
+}
+
+
+/* Scrollbar width */
+::-webkit-scrollbar {
+    width: 0.8rem;
+    height: 0.8rem;
+}
+
+/* Scrollbar track */
+::-webkit-scrollbar-track {
+    background-color: #02141d;
+}
+
+/* Scrollbar thumb with pink & blue gradient */
+::-webkit-scrollbar-thumb {
+    border-radius: 2rem;
+    background: linear-gradient(45deg, #ff6bcb, #63b3ed);
+}
