@@ -18,6 +18,7 @@ import RnDSig from "./pages/RndSig"; // Import RndSig Page
 import HackGTBIT from "./pages/HackGtbit";
 import Newsletter from "./pages/newsletter"; 
 import Magazine from "./pages/magazine"; 
+import Achievement from "./pages/Achievement";
 
 function Home() {
   return (
@@ -43,6 +44,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/newsletter" element={<Newsletter />} />
           <Route path="/magazine" element={<Magazine />} />
+          <Route path="/achievements" element={<Achievement />} />
           <Route path="/execom" element={<ExecomMembers />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/aimsig" element={<AimSig />} />

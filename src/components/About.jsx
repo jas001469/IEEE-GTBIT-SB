@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { FaNewspaper, FaBookOpen } from "react-icons/fa";
+import { GrAchievement } from "react-icons/gr";
+
 
 const AboutUs = () => {
   // States for animated numbers
@@ -92,6 +94,9 @@ const AboutUs = () => {
 >
   <FaBookOpen className="button-icon" /> Magazine
 </a>
+<Link to="/achievements" className="glass-button">
+  <GrAchievement className="button-icon" /> Achievements
+</Link>
           </div>
         </div>
         
