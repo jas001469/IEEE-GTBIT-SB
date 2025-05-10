@@ -100,7 +100,7 @@ const Navbar = ({ navOpen, setNavOpen, contactActive, setContactActive }) => {
     { label: "About Us", link: "#about", type: "scroll" },
     { label: "Chapters", link: "#chapters", type: "scroll" },
     { label: "Events", link: "#events", type: "scroll" },
-    { label: "Execom", link: "/execom", type: "route" },
+    { label: "Execomm", link: "/execom", type: "route" },
     { label: "Gallery", link: "/gallery", type: "route" },
   ];
 
