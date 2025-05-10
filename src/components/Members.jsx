@@ -68,8 +68,8 @@ export const members = [
   { name: "Rishi Raj Singh", position: "Photography Team Coordinator", branch: "ECE ( 1st Year )", image: "Rishiraj Singh.jpg", description: "", socials: { instagram: "", linkedin: "https://www.linkedin.com/in/rishi-raj-singh-218786353", twitter: "#", }, },
   
   //Webmaster
-  { name: "Jas Singh Ajmani", position: "Webmaster", branch: "CSE ( 2nd Year )", image: "\ Jas Singh Ajmani.jpg", description: "", socials: { instagram: "https://www.instagram.com/js.ajmani?igsh=MXNrbnVvcXUxbDI3dA==", linkedin: "https://www.linkedin.com/in/jas-singh-ajmani?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app", twitter: "#", }, },
-  { name: "Manrai Singh", position: "Webmaster", branch: "CSE ( 1st Year )", image: "/ Manrai Singh.jpg", description: "", socials: { instagram: "https://www.instagram.com/manrai_singh", linkedin: "https://www.linkedin.com/in/manrai-singh", twitter: "#", }, },
+  { name: "Jas Singh Ajmani", position: "Webmaster", branch: "CSE ( 2nd Year )", image: " Jas Singh Ajmani.jpg", description: "", socials: { instagram: "https://www.instagram.com/js.ajmani?igsh=MXNrbnVvcXUxbDI3dA==", linkedin: "https://www.linkedin.com/in/jas-singh-ajmani?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app", twitter: "#", }, },
+  { name: "Manrai Singh", position: "Webmaster", branch: "CSE ( 1st Year )", image: " Manrai Singh.jpg", description: "", socials: { instagram: "https://www.instagram.com/manrai_singh", linkedin: "https://www.linkedin.com/in/manrai-singh", twitter: "#", }, },
   
   //WIE 
   { name: "Navjyot Kaur", position: "WIE Chairperson", branch: "IT ( 2nd Year )", image: "Navjyot Kaur.jpeg", description: "Leads the Women in Engineering Affinity Group.", socials: { instagram: "https://www.instagram.com/navjyotkaurr/?hl=en", linkedin: "https://www.linkedin.com/in/navjyotkaur1510/", twitter: "#", }, },
