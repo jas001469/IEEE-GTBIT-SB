@@ -72,9 +72,9 @@ body {
   @apply w-10 h-10 grid place-items-center bg-zinc-50/10 rounded-xl ring-inset ring-1 ring-zinc-50/[0.02] backdrop-blur-2xl hover:bg-zinc-50/15 transition-[transform,background-color] active:scale-95
 }
 
-/* Navbar */
- .navbar {
-   @apply absolute top-0 left-1/2 -translate-x-1/2 flex justify-center min-w-40 p-2 bg-blue-400/40 rounded-2xl ring-inset ring-1 ring-blue-400/40 scale-90 isolate blur-sm opacity-0 invisible transition-[opacity,transform,filter] md:top-0 md:opacity-100 md:blur-none md:visible md:scale-100 backdrop-blur-2xl;
+/* Main Navbar */
+.navbar {
+  @apply absolute top-0 left-1/2 -translate-x-1/2 flex justify-center min-w-40 p-2 bg-blue-400/40 rounded-2xl ring-inset ring-1 ring-blue-400/40 scale-90 isolate blur-sm opacity-0 invisible transition-[opacity,transform,filter] md:top-6 md:opacity-100 md:blur-none md:visible md:scale-100 backdrop-blur-2xl;
 }
 
 .navbar.active {
@@ -82,61 +82,71 @@ body {
 }
 
 .nav-link {
-  @apply grid items-center h-9 px-4 text-sm font-medium tracking-wide text-blue-50/50 hover:text-blue-50 transition-colors
+  @apply grid items-center h-9 px-4 text-sm font-medium tracking-wide text-blue-50/50 hover:text-blue-50 transition-colors;
 }
 
 .nav-link.active {
-  @apply text-zinc-900 duration-500
+  @apply text-zinc-900 duration-500;
 }
 
 .navbar .active-box {
-  @apply absolute bg-blue-50 rounded-lg -z-10 transition-[top,left] duration-500
-} 
-/* Mobile-specific styles for Navbar */
-/* ✅ Default desktop styles – keep your existing Tailwind or regular styles */
+  @apply absolute bg-blue-50 rounded-lg -z-10 transition-[top,left] duration-500;
+}
 
-
-
-/* ✅ Mobile responsive override */
+/* Mobile styles */
 @media (max-width: 768px) {
+  .navbar-container {
+    position: relative;
+    display: inline-block; /* Contain the dropdown */
+  }
+
   .navbar {
-    position: fixed !important;
-    top: 100px !important;
-    left: 100% !important;
-    transform: translateX(-50%) !important;
-    width: auto !important;
-    max-width: 100% !important;
-    padding: 10px 14px !important;
-    background-color: rgba(255, 255, 255, 0.95) !important;
-    border-radius: 16px !important;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08) !important;
+    position: absolute !important;
+    top: calc(100% + 8px) !important; /* 8px below the menu button */
+    right: -29px !important; /* Push 8px more to the right */
+    left: auto !important;
+    transform: none !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    background-color: white !important;
+    padding: 8px !important;
+    border-radius: 8px !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
     z-index: 999 !important;
-    display: flex !important;
-    justify-content: center !important;
-    /* flex-wrap: wrap !important; */
-    /* gap: 0.2px !important; */
-    text-align: center !important;
+    width: auto !important;
+    min-width: 170px !important;
+    margin: 0 !important;
+    border: 1px solid #e2e8f0 !important;
+    animation: fadeIn 0.15s ease-out forwards;
   }
 
   .nav-link {
-    padding: 6px 10px !important;
-    font-size: 11px !important;
-    font-weight: 600 !important;
-    color: #1e3a8a !important;
-    text-decoration: none;
-    white-space: nowrap;
-    border-radius: 8px;
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
+    padding: 8px 12px !important; /* Balanced padding */
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    color: #1e293b !important;
+    text-align: left !important;
+    border-radius: 4px !important;
+    margin: 2px 0 !important;
+    transition: all 0.2s ease !important;
+    display: block !important;
+    white-space: nowrap !important;
   }
 
-  .navbar .active-box {
-    display: none !important;
+  .nav-link:hover {
+    background-color: #f8fafc !important;
+  }
+
+  .nav-link.active {
+    background-color: #eff6ff !important;
+    color: #1d4ed8 !important;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
   }
 }
-
-
 
 
 

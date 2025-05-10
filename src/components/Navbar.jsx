@@ -89,7 +89,7 @@ import { useRef, useEffect, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
 
-const Navbar = ({ navOpen }) => {
+const Navbar = ({ navOpen, setNavOpen, contactActive, setContactActive }) => {
   const activeBox = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
   const location = useLocation();
@@ -123,6 +123,8 @@ const Navbar = ({ navOpen }) => {
   const handleScroll = (e, link, index) => {
     e.preventDefault();
     setActiveIndex(index);
+    setContactActive(false);
+    setNavOpen(false);
 
     if (location.pathname !== "/") {
       navigate("/", { replace: true });
@@ -134,6 +136,12 @@ const Navbar = ({ navOpen }) => {
     }
   };
 
+  const handleClick = (index) => {
+    setActiveIndex(index);
+    setContactActive(false);
+    setNavOpen(false);
+  };
+
   return (
     <nav className={`navbar ${navOpen ? "active" : ""}`}>
       {navItems.map(({ label, link, type }, index) =>
@@ -142,8 +150,8 @@ const Navbar = ({ navOpen }) => {
             key={index}
             to={link}
             data-label={label}
-            className={`nav-link ${activeIndex === index ? "active" : ""}`}
-            onClick={() => setActiveIndex(index)}
+            className={`nav-link ${activeIndex === index && !contactActive ? "active" : ""}`}
+            onClick={() => handleClick(index)}
           >
             {label}
           </Link>
@@ -152,7 +160,7 @@ const Navbar = ({ navOpen }) => {
             key={index}
             href={link}
             data-label={label}
-            className={`nav-link ${activeIndex === index ? "active" : ""}`}
+            className={`nav-link ${activeIndex === index && !contactActive ? "active" : ""}`}
             onClick={(e) => handleScroll(e, link, index)}
           >
             {label}
@@ -166,9 +174,14 @@ const Navbar = ({ navOpen }) => {
 
 Navbar.propTypes = {
   navOpen: PropTypes.bool.isRequired,
+  setNavOpen: PropTypes.func.isRequired,
+  contactActive: PropTypes.bool.isRequired,
+  setContactActive: PropTypes.func.isRequired,
 };
 
 export default Navbar;
+
+
 
 
 
