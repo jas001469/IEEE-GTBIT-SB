@@ -91,13 +91,13 @@ const events = [
     id: 15,
     title: "JASHN-E-FRESHERS",
     description: "Day One was packed with energetic and creative games like Groove & Loop, Glass Pong, and Dare to Draw. Freshers engaged in music, rhythm, and sensory challenges, encouraging self-expression and connection while spreading fun and laughter across the campus. Day Two blended learning and excitement with IEEE Orientation, Brain Maze, and quirky games like Secret Swap and Eye Duel. It aimed to build awareness, teamwork, and quick thinking, while keeping the energy high through dynamic physical and mental challenges.",
-    image: "jashan.jpeg",
+    image: "jashan1.png",
   },
   {
     id: 16,
     title: "IEEE DSSYWLC 24",
     description: "IEEE DSSYWLC’24, held on February 8-9, 2025, at BVICAM, New Delhi, was a remarkable gathering of students, professionals, and industry leaders under the theme “With Technology, Future is NOW!",
-    image: "dsc.jpeg",
+    image: "dsc1.jpg",
   },
 ];
 
