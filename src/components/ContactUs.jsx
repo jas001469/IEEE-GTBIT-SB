@@ -20,22 +20,22 @@ const socialLinks = [
 const ContactUs = () => {
   return (
     <section id="contact" className="pt-22">
-      <div className="min-h-[calc(85vh-5rem)] w-full bg-gradient-to-br from-blue-400 flex flex-col items-center justify-center p-4 sm:p-6 md:p-10">
+      <div className="min-h-[calc(85vh-5rem)] w-full bg-gradient-to-br from-blue-400 via-gray-950 to-gray-950  flex flex-col items-center justify-center p-4 sm:p-6 md:p-10">
         <div className="container max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-12">
           
           {/* Left Column */}
           <div className="flex flex-col">
-            <h2 className="headline-1 font-extrabold max-w-[20ch]">
+            <h2 className="headline-1 font-semibold max-w-[20ch]">
               Let&apos;s Connect
             </h2>
 
-            <p className="text-white mt-3 font-bold mb-8 max-w-[50ch] lg:max-w-[30ch]">
+            <p className="text-white mt-3 font-normal mb-8 max-w-[50ch] lg:max-w-[30ch]">
               Connect with our IEEE team to explore partnership opportunities, discuss technical projects, or learn more about our professional initiatives.
             </p>
 
             <div className="mb-6">
-              <h3 className="headline-1 font-extrabold">Where To Find Us</h3>
-              <p className="text-white mt-3 font-bold">
+              <h3 className="headline-1 font-semibold">Where To Find Us</h3>
+              <p className="text-white mt-3 ">
                 Guru Tegh Bahadur Institute of Technology<br />
                 G-8 Area, Press Colony, Rajouri Garden,<br />
                 New Delhi, Delhi, 110064<br />
@@ -43,7 +43,7 @@ const ContactUs = () => {
             </div>
 
             <div className="mb-6">
-              <h3 className="headline-1 font-extrabold">Email Us At</h3>
+              <h3 className="headline-1 font-semibold">Email Us At</h3>
               <p className="text-white font-bold mt-3">
                 <a href="mailto:ieeegtbit@gmail.com" className="hover:text-white transition-colors">
                   ieeegtbit@gmail.com
