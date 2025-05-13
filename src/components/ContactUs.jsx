@@ -55,7 +55,7 @@ const ContactUs = () => {
           {/* Right Column - Form */}
           <div className="flex flex-col">
             <form
-              action="#"
+              action="https://getform.io/f/aqokgqqa"
               method="POST"
               className="flex flex-col h-full"
             >
