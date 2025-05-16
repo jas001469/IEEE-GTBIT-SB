@@ -36,7 +36,7 @@ const RnDSig = () => {
           <img src="/RnD logo.png" alt="RnDSig" className="rnd-logo" />
         </div>
         <p className="rnd-lorem">
-        IEEE has supported the scientific community by providing publishing opportunities and supporting research. In order to increase knowledge and produce groundbreaking discoveries, the IEEE Research and Development SIG fosters a culture of creativity and research by frequently proposing projects, hosting seminars, and providing opportunities for collaboration with academics and corporate mentors.  </p>
+        The R&D SIG fosters research and innovation by means of projects, seminars, and guest lectures. It develops a vibrant scientific community, fosters mentorship, and offers networking. By filling the gap between theory and practice, it improves careers and builds collective knowledge across disciplines for a brighter, collaborative future. </p>
       </div>
 
       {/* Team Section */}

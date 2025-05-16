@@ -36,7 +36,7 @@ const Csig = () => {
           <img src="/Csig.png" alt="CSIG" className="csig-logo" />
         </div>
         <p className="csig-lorem">
-          The IEEE Computer Society Interest Group (CSIG) at GTBIT focuses on advancing computer science knowledge through workshops, coding competitions, and tech seminars. Our team works to enhance members' technical skills and foster innovation in computing technologies.
+        The Circuit Masters SIG is a lively community of electronics enthusiasts, providing hands-on learning, workshops, and design competitions. It is open to everyone, from beginner to expert, and encourages creativity, collaboration, and innovation. Members gain from expert advice, useful resources, and a supportive community to achieve success in circuit design and electronics.
         </p>
       </div>
 

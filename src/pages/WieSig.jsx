@@ -45,7 +45,7 @@ const AIM = () => {
           <img src="/WIE.png" alt="WIE SIG" className="wie-logo" />
         </div>
         <p className="wie-lorem">
-        The IEEE Women in Engineering (WIE) Affinity Group, operating under the auspices of the IEEE GTBIT Student Branch and presided over by Chairperson Navjot Kaur, is committed to the empowerment of women in the field of STEM. The initiative seeks to inspire women and cultivate a supportive environment that includes both women and men. Through the provision of mentorship, the group offers guidance and serves as a role model for success, promoting personal and professional growth. Emphasizing mentorship, networking, and professional development, the committed team boosts the contributions of women in their fields.
+        The IEEE WIE Affinity Group, enables women in STEM with a diverse community. By providing professional development, networking, and mentorship, it promotes growth, benefits women and men, and inspires women's contributions in professional and personal life.
         </p>
       </div>
 
