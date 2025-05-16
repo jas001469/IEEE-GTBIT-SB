@@ -12,7 +12,7 @@ const AIM = () => {
       image: '/Navjyot Kaur.jpeg',
     },
     {
-      name: 'Gunisha Kukreja',
+      name: 'Gunisha Kaur',
       role: 'Vice Chairperson',
       image: '/gunisha kaur.jpg',
     },
