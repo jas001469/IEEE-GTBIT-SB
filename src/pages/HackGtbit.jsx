@@ -32,7 +32,7 @@ const HackGTBIT = () => {
         </div>
         <p className="hackgtbit-lorem">
         HackGTBIT SIG 
-The first SIG to be established, HackGTBIT, plans and manages a variety of activities to encourage creativity and problem-solving through planned hackathons and seminars, equipping students to take on challenges and apply their technological skills in practical settings. 
+        the first SIG of IEEE GTBIT SB, promotes innovation, creativity, and problem-solving through hackathons, seminars, and group assignments. It offers real-world experience, mentorship, and team-building, allowing newcomers as well as veterans to learn, share ideas, and develop useful technology solutions and prepare for the outside world.
 </p>
       </div>
 

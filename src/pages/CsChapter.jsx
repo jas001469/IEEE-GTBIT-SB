@@ -46,7 +46,9 @@ const CsChapter = () => {
           <img src="/IEEE CS chapter.jpeg" alt="CS SIG" className="cs-logo" />
         </div>
         <p className="aim-lorem">
-        The IEEE Computer Science (CS) Chapter, led by Chairperson Supret RJ Kaur, aims to develop the field of computer science through a variety of workshops and projects that aim to improve programming and problem-solving abilities. These programs encourage creativity, teamwork, and the growth of technical skills. Through providing hands-on experience, coding challenges, and mentorship, the chapter plays a crucial role in supporting students to remain updated with the latest trends, perform well in their fields of work, and develop professionally as engineers. </p>
+        The IEEE CS Chapter, promotes computer science talent through projects, workshops, and mentoring. It promotes innovation, collaboration, and technical development, enabling the students to remain current, become professionals, and develop improved programming and problem-solving skills.
+
+</p>
       </div>
 
       {/* Team Section */}

@@ -31,7 +31,7 @@ const PolarisSig = () => {
           <img src="Polaris Sig.png" alt="Polaris" className="polaris-logo" />
         </div>
         <p className="polaris-lorem">
-        For those who appreciate traveling deep into space and seeing galaxies that are billions of light years away, Polaris SIG is an astronomy-focused project. It offers a collaborative environment where students can explore their interests, work on research projects, and engage in a variety of learning and curiosity-sparking activities. 
+        Polaris SIG is an active astronomy community that sparks enthusiasm for space through research, hands-on experiences, and collaboration. It organizes seminars on the application of machine learning for astrophysics, providing lectures and workshops that inspire creativity, thinking, and space science inquiry in the evolving universe.
         </p>
       </div>
 

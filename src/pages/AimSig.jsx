@@ -35,7 +35,8 @@ const AIM = () => {
           <img src="/AIM sig.png" alt="AIM SIG" className="aim-logo" />
         </div>
         <p className="aim-lorem">
-        The IEEE GTBIT SB's AI-ML SIG aims to promote artificial intelligence research and development for anyone with an interest in machine learning. It offers a collaborative setting where students may work on real-world problems, develop technologies, and engage in experiential learning. Regardless of your level of experience, AI-ML SIG allows you to study intelligent systems and shape technological advancement.
+        The AIM SIG offers an open-access AI community to members of different levels. Members learn AI through project-based training, discussions, and hackathons from ML, NLP, to robotics. AIM promotes learning, networking, and innovation through workshops conducted by experts, which lead to progress and real-world impact in technology.
+
         </p>
       </div>
 
