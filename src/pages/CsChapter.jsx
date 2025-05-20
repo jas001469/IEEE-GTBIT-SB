@@ -31,12 +31,7 @@ const CsChapter = () => {
       name: 'Archita Garg',
       role: 'Coordinator',
       image: '/Archita Garg.jpg',
-    },
-    {
-      name: 'Gurnoor Singh',
-      role: 'Coordinator',
-      image: '/GURNOOR SINGH.png',
-    },
+    }
   ];
 
   return (
