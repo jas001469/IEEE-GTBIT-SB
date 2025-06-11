@@ -38,8 +38,12 @@ const ExecomMembers = () => {
   }, []);
 
   // Filter groups
-  const branchCounselorAndMentor = members.filter(member =>
-    member.position === "Branch Counselor" || member.position === "Mentor"
+  const branchCounselor = members.filter(member =>
+    member.position === "Branch Counselor" 
+  );
+
+  const branchMentor = members.filter(member =>
+     member.position === "Mentor"
   );
 
   const coreExecom = members.filter(member =>
@@ -58,12 +62,24 @@ const ExecomMembers = () => {
       filter: (member) => member.position.includes("Human Resources"),
     },
     {
+      name: "Women in Engineering (WIE)",
+      filter: (member) => member.position.includes("WIE"),
+    },
+    {
+      name: "Computer Society Chapter",
+      filter: (member) => member.position.includes("CS Chapter"),
+    },
+    {
       name: "Technical Activities Committee",
       filter: (member) => member.position.includes("Technical Activities Committee"),
     },
     {
-      name: "Electronics Team",
-      filter: (member) => member.position.includes("Electronics Team"),
+      name: "Webmasters",
+      filter: (member) => member.position === "Webmaster",
+    },
+    {
+      name: "AI Masters",
+      filter: (member) => member.position.includes("AI Masters"),
     },
     {
       name: "DSA Team",
@@ -72,6 +88,10 @@ const ExecomMembers = () => {
     {
       name: "Web Development Team",
       filter: (member) => member.position.includes("Web Development Team"),
+    },
+    {
+      name: "Electronics Team",
+      filter: (member) => member.position.includes("Electronics Team"),
     },
     {
       name: "Creative Team",
@@ -98,18 +118,6 @@ const ExecomMembers = () => {
       filter: (member) => member.position.includes("Photography Team"),
     },
     {
-      name: "Webmasters",
-      filter: (member) => member.position === "Webmaster",
-    },
-    {
-      name: "Women in Engineering (WIE)",
-      filter: (member) => member.position.includes("WIE"),
-    },
-    {
-      name: "Computer Society Chapter",
-      filter: (member) => member.position.includes("CS Chapter"),
-    },
-    {
       name: "Research and Development Team",
       filter: (member) => member.position.includes("Research and Development"),
     },
@@ -120,10 +128,6 @@ const ExecomMembers = () => {
     {
       name: "Polaris",
       filter: (member) => member.position.includes("Polaris"),
-    },
-    {
-      name: "AI Masters",
-      filter: (member) => member.position.includes("AI Masters"),
     },
     {
       name: "Circuit Masters",
@@ -141,9 +145,16 @@ const ExecomMembers = () => {
         <div className="w-20 h-1 bg-gradient-to-r from-blue-500 via-gray-400 to-black mx-auto mt-4"></div>
       </div>
 
-      {/* Branch Counselor & Mentor Row */}
+      {/* Branch Counselor */}
       <div className="flex flex-wrap justify-center gap-6 mb-12">
-        {branchCounselorAndMentor.map((member, index) => (
+        {branchCounselor.map((member, index) => (
+          <MemberCard key={index} member={member} />
+        ))}
+      </div>
+
+      {/* Mentor Row */}  
+      <div className="flex flex-wrap justify-center gap-6 mb-12">
+        {branchMentor.map((member, index) => (
           <MemberCard key={index} member={member} />
         ))}
       </div>
