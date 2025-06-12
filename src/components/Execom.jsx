@@ -37,13 +37,12 @@ const ExecomMembers = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
 
-  // Filter groups
   const branchCounselor = members.filter(member =>
-    member.position === "Branch Counselor" 
+    member.position === "Branch Counselor"
   );
 
   const branchMentor = members.filter(member =>
-     member.position === "Mentor"
+    member.position === "Mentor"
   );
 
   const coreExecom = members.filter(member =>
@@ -78,7 +77,7 @@ const ExecomMembers = () => {
       filter: (member) => member.position === "Webmaster",
     },
     {
-      name: "AI Masters",
+      name: "AI Masters SIG",
       filter: (member) => member.position.includes("AI Masters"),
     },
     {
@@ -118,25 +117,46 @@ const ExecomMembers = () => {
       filter: (member) => member.position.includes("Photography Team"),
     },
     {
-      name: "Research and Development Team",
+      name: "Research and Development Team SIG",
       filter: (member) => member.position.includes("Research and Development"),
     },
     {
-      name: "HackGTBIT",
+      name: "HackGTBIT SIG",
       filter: (member) => member.position.includes("HackGTBIT"),
     },
     {
-      name: "Polaris",
+      name: "Polaris SIG",
       filter: (member) => member.position.includes("Polaris"),
     },
     {
-      name: "Circuit Masters",
+      name: "Circuit Masters SIG",
       filter: (member) => member.position.includes("Circuit Masters"),
     }
   ];
 
-  // Function to render member cards with conditional layout
-  const renderMemberCards = (members) => {
+  const renderMemberCards = (members, groupName) => {
+    if (groupName === "Computer Society Chapter") {
+      const firstRow = members.slice(0, 3);
+      const secondRow = members.slice(3);
+
+      return (
+        <div className="space-y-6">
+          <div className="flex flex-wrap justify-center gap-6">
+            {firstRow.map((member, index) => (
+              <MemberCard key={index} member={member} />
+            ))}
+          </div>
+          {secondRow.length > 0 && (
+            <div className="flex flex-wrap justify-center gap-6">
+              {secondRow.map((member, index) => (
+                <MemberCard key={index + 3} member={member} />
+              ))}
+            </div>
+          )}
+        </div>
+      );
+    }
+
     if (members.length <= 5) {
       return (
         <div className="flex flex-wrap justify-center gap-6">
@@ -146,8 +166,7 @@ const ExecomMembers = () => {
         </div>
       );
     } else {
-      // Split into chunks of 4 for teams with more than 5 members
-      const chunkSize = 4;
+      const chunkSize = 3;
       const chunks = [];
       for (let i = 0; i < members.length; i += chunkSize) {
         chunks.push(members.slice(i, i + chunkSize));
@@ -169,7 +188,6 @@ const ExecomMembers = () => {
 
   return (
     <section id="execom" className="bg-gray-900 text-white py-20 px-5 min-h-screen">
-      {/* Section Heading */}
       <div className="text-center mb-12 mt-8">
         <h2 className="text-5xl font-bold uppercase bg-gradient-to-r from-blue-500 via-white to-black text-transparent bg-clip-text drop-shadow-lg">
           Executive Committee
@@ -177,7 +195,6 @@ const ExecomMembers = () => {
         <div className="w-20 h-1 bg-gradient-to-r from-blue-500 via-gray-400 to-black mx-auto mt-4"></div>
       </div>
 
-      {/* Branch Counselor */}
       <div className="space-y-8 mb-12">
         <h3 className="text-4xl font-bold text-center uppercase bg-gradient-to-r from-blue-500 via-white to-black text-transparent bg-clip-text">
           Branch Counselor
@@ -185,15 +202,13 @@ const ExecomMembers = () => {
         {renderMemberCards(branchCounselor)}
       </div>
 
-      {/* Mentor Row */}  
       <div className="space-y-8 mb-12">
-        <h3 className="text-2xl font-bold text-center uppercase bg-gradient-to-r from-blue-500 via-white to-black text-transparent bg-clip-text">
+        <h3 className="text-3xl font-bold text-center uppercase bg-gradient-to-r from-blue-500 via-white to-black text-transparent bg-clip-text">
           Mentor
         </h3>
         {renderMemberCards(branchMentor)}
       </div>
 
-      {/* Core Execom Row */}
       <div className="space-y-8 mb-16">
         <h3 className="text-2xl font-bold text-center uppercase bg-gradient-to-r from-blue-500 via-white to-black text-transparent bg-clip-text">
           Core Team
@@ -201,18 +216,21 @@ const ExecomMembers = () => {
         {renderMemberCards(coreExecom)}
       </div>
 
-      {/* Team Group Sections */}
       <div className="space-y-16">
         {teamGroups.map((group) => {
           const teamMembers = members.filter(group.filter);
           if (teamMembers.length === 0) return null;
 
+          // Custom heading size for Creative Team
+          const headingClass =
+            group.name === "Creative Team"
+              ? "text-4xl font-bold text-center uppercase bg-gradient-to-r from-blue-500 via-white to-black text-transparent bg-clip-text"
+              : "text-2xl font-bold text-center uppercase bg-gradient-to-r from-blue-500 via-white to-black text-transparent bg-clip-text";
+
           return (
             <div key={group.name} className="space-y-8">
-              <h3 className="text-2xl font-bold text-center uppercase bg-gradient-to-r from-blue-500 via-white to-black text-transparent bg-clip-text">
-                {group.name}
-              </h3>
-              {renderMemberCards(teamMembers)}
+              <h3 className={headingClass}>{group.name}</h3>
+              {renderMemberCards(teamMembers, group.name)}
             </div>
           );
         })}
@@ -222,6 +240,7 @@ const ExecomMembers = () => {
 };
 
 export default ExecomMembers;
+
 
 
 
