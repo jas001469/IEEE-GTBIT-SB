@@ -57,7 +57,6 @@ const ExecomMembers = () => {
   );
 
   const teamGroups = [
-    
     {
       name: "Women in Engineering (WIE)",
       filter: (member) => member.position.includes("WIE"),
@@ -70,8 +69,6 @@ const ExecomMembers = () => {
       name: "Human Resources",
       filter: (member) => member.position.includes("Human Resources"),
     },
-    
-    
     {
       name: "Technical Activities Committee",
       filter: (member) => member.position.includes("Technical Activities Committee"),
@@ -138,6 +135,38 @@ const ExecomMembers = () => {
     }
   ];
 
+  // Function to render member cards with conditional layout
+  const renderMemberCards = (members) => {
+    if (members.length <= 5) {
+      return (
+        <div className="flex flex-wrap justify-center gap-6">
+          {members.map((member, index) => (
+            <MemberCard key={index} member={member} />
+          ))}
+        </div>
+      );
+    } else {
+      // Split into chunks of 4 for teams with more than 5 members
+      const chunkSize = 4;
+      const chunks = [];
+      for (let i = 0; i < members.length; i += chunkSize) {
+        chunks.push(members.slice(i, i + chunkSize));
+      }
+
+      return (
+        <div className="space-y-6">
+          {chunks.map((chunk, chunkIndex) => (
+            <div key={chunkIndex} className="flex flex-wrap justify-center gap-6">
+              {chunk.map((member, index) => (
+                <MemberCard key={index} member={member} />
+              ))}
+            </div>
+          ))}
+        </div>
+      );
+    }
+  };
+
   return (
     <section id="execom" className="bg-gray-900 text-white py-20 px-5 min-h-screen">
       {/* Section Heading */}
@@ -149,24 +178,27 @@ const ExecomMembers = () => {
       </div>
 
       {/* Branch Counselor */}
-      <div className="flex flex-wrap justify-center gap-6 mb-12">
-        {branchCounselor.map((member, index) => (
-          <MemberCard key={index} member={member} />
-        ))}
+      <div className="space-y-8 mb-12">
+        <h3 className="text-4xl font-bold text-center uppercase bg-gradient-to-r from-blue-500 via-white to-black text-transparent bg-clip-text">
+          Branch Counselor
+        </h3>
+        {renderMemberCards(branchCounselor)}
       </div>
 
       {/* Mentor Row */}  
-      <div className="flex flex-wrap justify-center gap-6 mb-12">
-        {branchMentor.map((member, index) => (
-          <MemberCard key={index} member={member} />
-        ))}
+      <div className="space-y-8 mb-12">
+        <h3 className="text-2xl font-bold text-center uppercase bg-gradient-to-r from-blue-500 via-white to-black text-transparent bg-clip-text">
+          Mentor
+        </h3>
+        {renderMemberCards(branchMentor)}
       </div>
 
       {/* Core Execom Row */}
-      <div className="flex flex-wrap justify-center gap-6 mb-16">
-        {coreExecom.map((member, index) => (
-          <MemberCard key={index} member={member} />
-        ))}
+      <div className="space-y-8 mb-16">
+        <h3 className="text-2xl font-bold text-center uppercase bg-gradient-to-r from-blue-500 via-white to-black text-transparent bg-clip-text">
+          Core Team
+        </h3>
+        {renderMemberCards(coreExecom)}
       </div>
 
       {/* Team Group Sections */}
@@ -180,11 +212,7 @@ const ExecomMembers = () => {
               <h3 className="text-2xl font-bold text-center uppercase bg-gradient-to-r from-blue-500 via-white to-black text-transparent bg-clip-text">
                 {group.name}
               </h3>
-              <div className="flex flex-wrap justify-center gap-6">
-                {teamMembers.map((member, index) => (
-                  <MemberCard key={index} member={member} />
-                ))}
-              </div>
+              {renderMemberCards(teamMembers)}
             </div>
           );
         })}
