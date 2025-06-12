@@ -57,10 +57,7 @@ const ExecomMembers = () => {
   );
 
   const teamGroups = [
-    {
-      name: "Human Resources",
-      filter: (member) => member.position.includes("Human Resources"),
-    },
+    
     {
       name: "Women in Engineering (WIE)",
       filter: (member) => member.position.includes("WIE"),
@@ -69,6 +66,12 @@ const ExecomMembers = () => {
       name: "Computer Society Chapter",
       filter: (member) => member.position.includes("CS Chapter"),
     },
+    {
+      name: "Human Resources",
+      filter: (member) => member.position.includes("Human Resources"),
+    },
+    
+    
     {
       name: "Technical Activities Committee",
       filter: (member) => member.position.includes("Technical Activities Committee"),
