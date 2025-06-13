@@ -33,12 +33,6 @@ const events = [
     image: "Innoshpere.png"
   },
   {
-    id: 6,
-    title: "MIST",
-    description: "MIST, IEEE DTU’s signature cryptic hunt, engaged participants in a 24-hour chess-inspired journey, testing analytical skills through 20 progressively challenging cryptic puzzles, delivering an immersive and intellectually stimulating experience.", 
-    image: "MIST.jpg"
-  },
-  {
     id: 7,
     title: "Code In Dark",
     description: "Code in the Dark presented a rigorous coding challenge that required participants to commit segments of code to memory and subsequently reproduce them under strict time constraints. The challenge featured three tiers of difficulty, with the most demanding level incorporating randomized programming languages. This format rigorously assessed participants on their speed, precision, and ability to execute code with minimal error through quick analytical thinking.",

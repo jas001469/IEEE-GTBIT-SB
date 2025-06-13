@@ -3,6 +3,20 @@ import { Link } from "react-router-dom"; // Import Link for navigation
 
 const chapters = [
   { 
+    title: "CS Chapter", 
+    bgColor: "bg-[#FFB6C1]/20", 
+    img: "/IEEE CS chapter.jpeg",
+    description: "Computer science enthusiasts working on cutting-edge projects.",
+    link: "/cschapter"
+  },
+  { 
+    title: "Women in Engineering Affinity Group", 
+    bgColor: "bg-[#DA70D6]/20", 
+    img: "/WIE.png",
+    description: "Empowering women in tech through mentorship and innovation.",
+    link: "/wiesig"
+  },
+  { 
     title: "Artificial Intelligence Masters SIG", 
     bgColor: "bg-[#FFD700]/20", 
     img: "/AIM sig.png",
@@ -10,25 +24,11 @@ const chapters = [
     link: "/aimsig"  
   },
   { 
-    title: "Women in Engineering Chapter", 
-    bgColor: "bg-[#DA70D6]/20", 
-    img: "/WIE.png",
-    description: "Empowering women in tech through mentorship and innovation.",
-    link: "/wiesig"
-  },
-  { 
     title: "Circuit Masters SIG", 
     bgColor: "bg-[#87CEEB]/20", 
     img: "/Csig.png",
     description: "Diving into electronics, PCB design, and IoT.",
     link: "/csig"
-  },
-  { 
-    title: "CS Chapter", 
-    bgColor: "bg-[#FFB6C1]/20", 
-    img: "/IEEE CS chapter.jpeg",
-    description: "Computer science enthusiasts working on cutting-edge projects.",
-    link: "/cschapter"
   },
   { 
     title: "Polaris SIG", 
@@ -45,7 +45,7 @@ const chapters = [
     link: "/rndsig"
   },
   { 
-    title: "HackGTBIT", 
+    title: "HackGTBIT SIG", 
     bgColor: "bg-[#1E90FF]/20", 
     img: "/HackGTBIT.png",
     description: "Annual hackathon driving innovation and creativity.",

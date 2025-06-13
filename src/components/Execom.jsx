@@ -57,7 +57,7 @@ const ExecomMembers = () => {
 
   const teamGroups = [
     {
-      name: "Women in Engineering (WIE)",
+      name: "Women in Engineering (WIE) Affinity Group",
       filter: (member) => member.position.includes("WIE"),
     },
     {
