@@ -31,12 +31,8 @@ const CsChapter = () => {
       name: 'Archita Garg',
       role: 'Coordinator',
       image: '/Archita Garg.jpg',
-    },
-    {
-      name: 'Gurnoor Singh',
-      role: 'Coordinator',
-      image: '/GURNOOR SINGH.png',
-    },
+    }
+    
   ];
 
   return (
@@ -77,7 +73,7 @@ const CsChapter = () => {
 
         {/* Coordinators - Three in a row */}
         <div className="csteam-row coordinators">
-          {[team[3], team[4], team[5]].map((member, index) => (
+          {[team[3], team[4]].map((member, index) => (
             <div className="csteam-card" key={index}>
               <h4 className="csteam-role">{member.role}</h4>
               <img src={member.image} alt={member.name} />
